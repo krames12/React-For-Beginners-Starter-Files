@@ -14,11 +14,10 @@ class App extends React.Component {
 
   componentDidMount() {
     const { params } = this.props.match;
-    // this.ref = base.syncState(`${params.storeId}/fishes`, {
-    //   context: this,
-    //   state: "fishes"
-    // });
-    console.log(fbApp);
+    this.ref = base.syncState(`${params.storeId}/fishes`, {
+      context: this,
+      state: "fishes"
+    });
   }
 
   addFish = fish => {
