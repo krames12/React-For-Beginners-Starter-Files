@@ -20,6 +20,10 @@ class App extends React.Component {
     });
   }
 
+  componentWillUnmount() {
+    base.removeBinging(this.ref);
+  }
+
   addFish = fish => {
     const fishes = { ...this.state.fishes };
     fishes[`fish${Date.now()}`] = fish;
