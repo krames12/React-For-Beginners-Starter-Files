@@ -34,7 +34,7 @@ class App extends React.Component {
   }
 
   componentWillUnmount() {
-    base.removeBinging(this.ref);
+    base.removeBinding(this.ref);
   }
 
   addFish = fish => {
